@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Video Studio</title>
+<style>
+*{box-sizing:border-box}
+body{
+ margin:0;
+ font-family:Arial,sans-serif;
+ background:#0b1020;
+ color:white;
+}
+header{
+ padding:22px;
+ text-align:center;
+ background:#151d35;
+ font-size:25px;
+ font-weight:bold;
+}
+main{
+ max-width:650px;
+ margin:45px auto;
+ padding:25px;
+}
+h1{text-align:center;font-size:32px}
+p{text-align:center;color:#b8c2d8}
+.box{
+ background:#171f36;
+ padding:25px;
+ border-radius:18px;
+ margin-top:30px;
+}
+textarea,select{
+ width:100%;
+ padding:15px;
+ margin:12px 0;
+ border-radius:10px;
+ border:1px solid #465273;
+ background:#0d1428;
+ color:white;
+ font-size:16px;
+}
+button{
+ width:100%;
+ padding:16px;
+ border:0;
+ border-radius:10px;
+ background:#7357ff;
+ color:white;
+ font-size:17px;
+ font-weight:bold;
+}
+#result{
+ margin-top:20px;
+ text-align:center;
+ color:#aebcff;
+}
+footer{
+ text-align:center;
+ padding:25px;
+ color:#8792aa;
+}
+</style>
+</head>
+<body>
+<header>🎬 AI VIDEO STUDIO</header>
+<main>
+<h1>Create Videos With AI</h1>
+<p>Turn your ideas into amazing videos.</p>
+<div class="box">
+<h2>Describe Your Video</h2>
+<textarea id="prompt" rows="5"
+placeholder="Write your video idea here..."></textarea>
+<select id="style">
+<option>Realistic Video</option>
+<option>3D Animation</option>
+<option>Cartoon Video</option>
+<option>Vegetable Characters</option>
+</select>
+<button onclick="generate()">Generate Video</button>
+<div id="result"></div>
+</div>
+</main>
+<footer>AI Video Studio © 2026</footer>
+<script>
+function generate(){
+let p=document.getElementById("prompt").value;
+if(!p.trim()){
+document.getElementById("result").innerText=
+"Please write your video idea first.";
+return;
+}
+document.getElementById("result").innerText=
+"Your idea is ready! AI video generation API needs to be connected.";
+}
+</script>
+</body>
+</html>
